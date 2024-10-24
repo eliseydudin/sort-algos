@@ -6,7 +6,7 @@
     ![Insertion-sort-example-300px.gif](files/insertion-sort-example-300px.gif)    
    
 4. Сортировка Слиянием (aka. Merge Sort). Массив разделяется на отсортированные группы, после чего они обратно соединяются в один массив.   
-    ![Merge-sort-example-300px.gif](files/merge-sort-example-300px.gif)    
+    ![Merge-sort-example-300px.gif](files/merge-sort-example-300px.gif)    
     
 # Имплементация   
 Для функций, используемых всеми алгоритмами также создан файл `lib.rs`   

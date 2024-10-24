@@ -14,3 +14,7 @@ path = "./src/choice_sort.rs"
 [[bin]]
 name = "insert_sort"
 path = "./src/insert_sort.rs"
+
+[[bin]]
+name = "merge_sort"
+path = "./src/merge_sort.rs"

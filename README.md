@@ -9,7 +9,7 @@
     ![Merge-sort-example-300px.gif](files/merge-sort-example-300px.gif)    
     
 # Имплементация   
-Для функций, используемых всеми алгоритмами также создан файл `lib.rs`   
+Для функций, используемых всеми алгоритмами, создан файл `lib.rs`   
  
 ```rust
 pub fn print_array<T: std::fmt::Display>(array: Vec<T>) {

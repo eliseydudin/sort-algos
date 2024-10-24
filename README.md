@@ -179,3 +179,12 @@ fn top_down_split_merge(b: &mut Vec<u32>, begin: usize, end: usize, a: &mut Vec<
     top_down_merge(b, begin, middle, end, a);
 }
 ```
+
+# Запуск локально
+Чтобы протестировать программы для себя, вам понадобятся:
+```
+python3+
+cargo
+```
+Далее запустите нужный вам алгоритм используя `cargo r --bin algo_sort`.
+Если вы хотите протестировать со своими тестами, то создайте директорию `tests` и поместите туда любой файл с тестами (они должны идти в одну строку) и запустите `python3 record_time.py test`

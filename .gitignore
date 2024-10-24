@@ -1,2 +1,4 @@
 /target
 .DS_Store
+tests
+# You should put your own tests in the test folder :3

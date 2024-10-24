@@ -3,6 +3,10 @@ use sort_algos::{print_array, read_u32_vec};
 fn main() {
     let mut nums = read_u32_vec();
     insert_sort(&mut nums);
+    let mut clone = nums.clone();
+    clone.sort();
+    assert!(clone == nums);
+
     print_array(nums);
 }
 

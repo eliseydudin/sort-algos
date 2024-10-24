@@ -1,35 +1,17 @@
+use sort_algos::{print_array, read_u32_vec};
+
 fn main() {
-    let mut buffer = String::new();
-    std::io::stdin().read_line(&mut buffer).unwrap();
-    let mut nums: Vec<usize> = buffer
-        .trim()
-        .split_whitespace()
-        .map(|s| s.parse::<usize>().unwrap())
-        .collect();
-
+    let mut nums = read_u32_vec();
     merge_sort(&mut nums);
-
     print_array(nums);
 }
 
-fn print_array<T: std::fmt::Display>(array: Vec<T>) {
-    print!("[");
-    for (i, elem) in array.iter().enumerate() {
-        print!("{}", elem);
-
-        if i != array.len() - 1 {
-            print!(", ");
-        }
-    }
-    println!("]");
-}
-
-fn merge_sort(a: &mut Vec<usize>) {
+fn merge_sort(a: &mut Vec<u32>) {
     let mut b = a.clone();
     top_down_split_merge(a, 0, a.len(), &mut b);
 }
 
-fn top_down_merge(b: &mut Vec<usize>, begin: usize, middle: usize, end: usize, a: &mut Vec<usize>) {
+fn top_down_merge(b: &mut Vec<u32>, begin: usize, middle: usize, end: usize, a: &mut Vec<u32>) {
     let mut i = begin;
     let mut j = middle;
 
@@ -44,7 +26,7 @@ fn top_down_merge(b: &mut Vec<usize>, begin: usize, middle: usize, end: usize, a
     }
 }
 
-fn top_down_split_merge(b: &mut Vec<usize>, begin: usize, end: usize, a: &mut Vec<usize>) {
+fn top_down_split_merge(b: &mut Vec<u32>, begin: usize, end: usize, a: &mut Vec<u32>) {
     if end - begin <= 1 {
         return;
     }
